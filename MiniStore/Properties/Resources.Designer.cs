@@ -93,6 +93,26 @@ namespace MiniStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap confirm {
+            get {
+                object obj = ResourceManager.GetObject("confirm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap confused {
+            get {
+                object obj = ResourceManager.GetObject("confused", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DefaultAvatar {
             get {
                 object obj = ResourceManager.GetObject("DefaultAvatar", resourceCulture);
@@ -126,6 +146,16 @@ namespace MiniStore.Properties {
         internal static System.Drawing.Bitmap ShopIcon {
             get {
                 object obj = ResourceManager.GetObject("ShopIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap successful {
+            get {
+                object obj = ResourceManager.GetObject("successful", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

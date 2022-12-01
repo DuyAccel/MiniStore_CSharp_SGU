@@ -12,6 +12,22 @@ namespace MiniStore.Costumized
 {
     public partial class CostumTextbox : UserControl
     {
+        public event EventHandler TextChanged;
+        private void HandleTextChanged(object sender, EventArgs e)
+        {
+            // we'll explain this in a minute
+            this.OnTxtTextChanged(EventArgs.Empty);
+        }
+
+        protected virtual void OnTxtTextChanged(EventArgs e)
+        {
+            if (this.TextChanged != null)
+            {
+                this.TextChanged(this, e);
+                textBox1.Select(textBox1.Text.Length, 0);
+            }
+        }
+
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 2;
         private bool underlinedStyle = false;
@@ -20,6 +36,7 @@ namespace MiniStore.Costumized
         public CostumTextbox()
         {
             InitializeComponent();
+            textBox1.TextChanged += this.HandleTextChanged;
         }
 
         public Color BorderColor 
@@ -130,6 +147,8 @@ namespace MiniStore.Costumized
             base.OnLoad(e);
             UpdateControlHeight();
         }
+
+        
     }
 
 }
