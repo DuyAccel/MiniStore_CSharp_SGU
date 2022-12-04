@@ -17,10 +17,6 @@ namespace MiniStore.DAO
             return conn.executeQuery("select phone, name, points, birthday from consumer where available = 1");
         }
         
-        public static DataTable getEmployee(string id)
-        {
-            return conn.executeQuery($"select phone, name, points, birthday from employee where id = '{id}' and available = 1");
-        }
         public static int addConsumer(ConsumerDTO consumer)
         {
             return conn.executeNonQuery($"insert into consumer values('{consumer.Phone}', N'{consumer.Name}', "

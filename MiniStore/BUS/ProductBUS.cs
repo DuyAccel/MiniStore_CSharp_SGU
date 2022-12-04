@@ -16,6 +16,25 @@ namespace MiniStore.BUS
         {
             return ProductDAO.getAllProduct();
         }
+        public static ProductDTO getProduct(string id)
+        {
+            DataTable data = ProductDAO.getProduct(id);
+            if (data.Rows.Count < 1) return null;
+            DataRow row = data.Rows[0];
+            return (new ProductDTO(
+                    row[0].ToString(),
+                    row[1].ToString(),
+                    row[2].ToString(),
+                    int.Parse(row[3].ToString()),
+                    row[4].ToString(),
+                    int.Parse(row[5].ToString()),
+                    row[6].ToString(),
+                    row[7].ToString(),
+                    row[8].ToString()
+                )
+                );
+        }
+
         public static bool addProduct(ProductDTO product)
         {
             product.Quantity = 0;

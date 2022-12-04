@@ -55,11 +55,17 @@ namespace MiniStore.DAO
             return conn.executeQuery("select top 1 id, name, unit, quantity, category, price, imgdir, barcode, provider "+
                 "from product order by id desc");
         }
+        public static DataTable getProduct(string id)
+        {
+            return conn.executeQuery("select top 1 id, name, unit, quantity, category, price, imgdir, barcode, provider " +
+                $"from product where id = '{id}' and available = 1");
+        }
         public static DataTable searchAdvance(string column, string keywords)
         {
             return conn.executeQuery("select id, name, unit, quantity, category, price, imgdir, barcode, provider " +
                 $"from product where available = 1 and {column} like '%{keywords}%'");
         }
+        
 
     }
 }

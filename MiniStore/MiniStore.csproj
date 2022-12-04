@@ -85,6 +85,8 @@
   <ItemGroup>
     <Compile Include="BUS\ConsumerBUS.cs" />
     <Compile Include="BUS\EmployeeBUS.cs" />
+    <Compile Include="BUS\InputBUS.cs" />
+    <Compile Include="BUS\InputDetailBUS.cs" />
     <Compile Include="BUS\ProductBUS.cs" />
     <Compile Include="BUS\ProviderBUS.cs" />
     <Compile Include="Costumized\Avatar.cs">
@@ -105,10 +107,14 @@
     <Compile Include="DAO\Connection.cs" />
     <Compile Include="DAO\ConsumerDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\InputDAO.cs" />
+    <Compile Include="DAO\InputDetailDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />
     <Compile Include="DAO\ProviderDAO.cs" />
     <Compile Include="DTO\ConsumerDTO.cs" />
     <Compile Include="DTO\EmployeeDTO.cs" />
+    <Compile Include="DTO\InputDetailDTO.cs" />
+    <Compile Include="DTO\InputDTO.cs" />
     <Compile Include="DTO\ProductDTO.cs" />
     <Compile Include="DTO\ProviderDTO.cs" />
     <Compile Include="ExtendedFeatures\Barcode.cs" />
@@ -140,6 +146,12 @@
       <DependentUpon>Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Features\ProductSetting.cs" />
+    <Compile Include="GUI\Features\QLProvider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Features\QLProvider.Designer.cs">
+      <DependentUpon>QLProvider.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Items\ConsumerItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +240,12 @@
     <Compile Include="GUI\Items\ProductItem.Designer.cs">
       <DependentUpon>ProductItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Items\ProviderItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Items\ProviderItem.Designer.cs">
+      <DependentUpon>ProviderItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Features\Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Features\QLProvider.resx">
+      <DependentUpon>QLProvider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Items\ConsumerItem.resx">
       <DependentUpon>ConsumerItem.cs</DependentUpon>
@@ -301,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Items\ProductItem.resx">
       <DependentUpon>ProductItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Items\ProviderItem.resx">
+      <DependentUpon>ProviderItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>

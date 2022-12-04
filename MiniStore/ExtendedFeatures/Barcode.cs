@@ -52,16 +52,7 @@ namespace MiniStore.ExtendedFeatures
             if (result != null)
             { 
                 txt_code.Texts = result.ToString();
-
-                if (Quantity_txt.Texts.Length == 0)
-                {
-                    Quantity_txt.Texts = "1";
-                }
-                else
-                {
-                    int Qty = int.Parse(Quantity_txt.Texts);
-                    Quantity_txt.Texts = "" + (Qty + 1);
-                }
+                Quantity_txt.Texts = "1";
             }
             pictureBox.Image = bitmap;
         }
